@@ -4,6 +4,14 @@ O app Câmera do iOS 26/27 recriado para o Windows: visor ao vivo da webcam, bot
 
 Feito com [Tauri 2](https://tauri.app) e HTML/CSS/JS puro (sem bundler).
 
+## Baixar
+
+**[⬇ Baixar a Câmera para Windows](https://github.com/THTECH296/camera-ios-windows/releases/latest/download/Camera_1.0.0_x64-setup.exe)** (1,5 MB · Windows 10 e 11, 64 bits)
+
+Abra o instalador: ele instala só para o seu usuário, sem pedir administrador, e cria atalhos no Menu Iniciar e na Área de Trabalho. Todas as versões ficam em [Releases](https://github.com/THTECH296/camera-ios-windows/releases).
+
+> O Windows pode mostrar "O Windows protegeu o computador" (SmartScreen), porque o instalador ainda não é assinado digitalmente. Clique em **Mais informações → Executar assim mesmo**.
+
 ## Recursos
 
 - **Foto**: flash de tela (como a câmera frontal do iPhone), Live Photo (1,5 s antes e depois do clique), timer de 3 ou 10 s, proporção 4:3, 16:9 ou quadrada.
