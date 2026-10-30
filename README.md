@@ -52,4 +52,8 @@ src/              interface (index.html, css/, js/)
 src-tauri/        lado nativo (Rust): rolo da câmera, protocolo midia://, permissão da webcam
 ```
 
+## Licença
+
+[MIT](LICENSE): pode usar, copiar, modificar e distribuir, inclusive em projetos comerciais, mantendo o aviso de copyright. A fonte Inter (em `src/fonts`) segue a licença SIL Open Font License.
+
 Projeto independente, sem ligação com a Apple. iOS e iPhone são marcas da Apple Inc.
