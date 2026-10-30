@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Câmera</title>
+  <link rel="stylesheet" href="css/camera.css" />
+</head>
+<body class="landscape mode-foto">
+  <div id="app">
+    <!-- visor -->
+    <section id="stage">
+      <div id="finder">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="demo" class="hidden"></canvas>
+        <div id="grid" class="hidden"><i></i><i></i><i></i><i></i></div>
+        <div id="blink"></div>
+        <div id="focus" class="hidden"><div class="sq"></div><div class="sun"><span class="ln a"></span><span class="ic-sun"></span><span class="ln b"></span></div></div>
+        <div id="lock" class="badge-y hidden">BLOQUEIO AE/AF</div>
+        <div id="count" class="hidden"></div>
+        <div id="busy" class="hidden"><div class="spin"></div><span>Processando time-lapse…</span></div>
+      </div>
+
+      <!-- barra superior -->
+      <header id="top" data-tauri-drag-region>
+        <button class="gl round" id="b-flash" title="Flash"></button>
+        <div class="top-mid" data-tauri-drag-region>
+          <div id="rec-time" class="hidden"><span class="dot"></span><b>00:00:00</b></div>
+          <button class="gl chip" id="b-format" title="Formato do vídeo"></button>
+          <button class="gl round" id="b-tray" title="Controles da câmera"></button>
+        </div>
+        <button class="gl round" id="b-live" title="Live Photo"></button>
+      </header>
+      <div id="toast" class="hidden"></div>
+
+      <!-- zoom, modos e bandeja de controles, no pé do visor -->
+      <div id="dock">
+        <div id="zoom" class="gl capsule"></div>
+        <div id="modes"><div class="track"></div></div>
+        <div id="tray" class="gl capsule hidden"></div>
+        <div id="tray-opts" class="hidden"></div>
+      </div>
+    </section>
+
+    <!-- trilho do obturador -->
+    <aside id="rail">
+      <button id="b-flip" class="gl round big" title="Trocar de câmera"></button>
+      <button id="b-snap" class="gl round big" title="Tirar foto durante o vídeo"><span class="dotw"></span></button>
+      <button id="shutter" title="Obturador (Espaço)" aria-label="Obturador"><span class="ring"></span><span class="core"></span></button>
+      <button id="thumb" title="Abrir a galeria"><img alt="" src="" /><video muted playsinline></video></button>
+      <button id="b-pause" class="gl round big" title="Pausar a gravação"></button>
+    </aside>
+  </div>
+
+  <!-- galeria -->
+  <div id="viewer" class="hidden">
+    <div class="v-media"></div>
+    <header class="v-top" data-tauri-drag-region>
+      <button class="gl round" id="v-back" title="Voltar (Esc)"></button>
+      <div class="v-title gl capsule" data-tauri-drag-region><b></b><span></span></div>
+      <div class="v-sp"></div>
+    </header>
+    <button class="v-nav prev gl round" title="Anterior"></button>
+    <button class="v-nav next gl round" title="Próxima"></button>
+    <footer class="v-bottom">
+      <div class="v-strip"></div>
+      <div class="v-actions">
+        <button class="gl round" id="v-folder" title="Mostrar na pasta"></button>
+        <button class="gl capsule" id="v-open" title="Abrir no app padrão">Abrir no Fotos</button>
+        <button class="gl round danger" id="v-del" title="Apagar"></button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="win-controls" id="winctl">
+    <button class="w-min" title="Minimizar" aria-label="Minimizar"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8" /></svg></button>
+    <button class="w-max" title="Maximizar" aria-label="Maximizar"><svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="2.2" /></svg></button>
+    <button class="w-close close" title="Fechar" aria-label="Fechar"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" /></svg></button>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
